@@ -6,29 +6,13 @@
 <title>Unicus Estate — motion piece (review)</title>
 <meta name="theme-color" content="#070A09">
 <style>
-@font-face{
-  font-family:'Fraunces';
-  src:url('fonts/fraunces-300.woff2') format('woff2');
-  font-weight:300; font-style:normal; font-display:block;
-}
-@font-face{
-  font-family:'Fraunces';
-  src:url('fonts/fraunces-italic-300.woff2') format('woff2');
-  font-weight:300; font-style:italic; font-display:block;
-}
-@font-face{
-  font-family:'Inter';
-  src:url('fonts/inter.woff2') format('woff2');
-  font-weight:100 900; font-style:normal; font-display:block;
-}
+@font-face{font-family:'Fraunces';src:url('fonts/fraunces-300.woff2') format('woff2');font-weight:300;font-style:normal;font-display:block}
+@font-face{font-family:'Fraunces';src:url('fonts/fraunces-italic-300.woff2') format('woff2');font-weight:300;font-style:italic;font-display:block}
+@font-face{font-family:'Inter';src:url('fonts/inter.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:block}
 
 :root{
-  --bg:#070A09;
-  --panel:#0E1613;
-  --line:rgba(244,241,233,.12);
-  --paper:#F4F1E9;
-  --brass:#C39A5C;
-  --sage:#9FB0A4;
+  --bg:#070A09; --panel:#0E1613; --line:rgba(244,241,233,.12);
+  --paper:#F4F1E9; --brass:#C39A5C; --sage:#9FB0A4;
 }
 *{box-sizing:border-box}
 html,body{height:100%}
@@ -39,29 +23,20 @@ body{
   color:var(--paper);
   font-family:'Inter',system-ui,-apple-system,sans-serif;
   display:flex;flex-direction:column;align-items:center;
-  padding:18px 16px 26px;gap:14px;
+  padding:18px 16px 40px;gap:14px;
   -webkit-font-smoothing:antialiased;
 }
-
 header{width:100%;max-width:560px;display:flex;align-items:baseline;justify-content:space-between;gap:12px}
-header h1{
-  font-family:'Fraunces',serif;font-weight:300;font-size:20px;margin:0;
-  letter-spacing:-.01em;
-}
+header h1{font-family:'Fraunces',serif;font-weight:300;font-size:20px;margin:0;letter-spacing:-.01em}
 header span{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--sage)}
 
 .stagewrap{position:relative;display:flex;justify-content:center}
 canvas#stage{
-  height:min(72vh, 780px);
-  width:auto;
-  aspect-ratio:9 / 16;
-  border-radius:16px;
-  background:#0A100D;
+  height:min(68vh,760px);width:auto;aspect-ratio:9/16;border-radius:16px;background:#0A100D;
   box-shadow:0 30px 80px -30px rgba(0,0,0,.9), 0 0 0 1px rgba(244,241,233,.07);
   display:block;
 }
 
-/* controls */
 .controls{width:100%;max-width:560px;display:flex;flex-direction:column;gap:10px}
 .row{display:flex;align-items:center;gap:8px}
 button{
@@ -72,24 +47,18 @@ button{
 }
 button:hover{background:#182520;border-color:rgba(195,154,92,.5)}
 button:disabled{opacity:.5;cursor:default}
-#clock{
-  font-variant-numeric:tabular-nums;font-size:12px;letter-spacing:.06em;
-  color:var(--sage);margin-left:auto;
-}
+#clock{font-variant-numeric:tabular-nums;font-size:12px;letter-spacing:.06em;color:var(--sage);margin-left:auto}
 input[type=range]{
   -webkit-appearance:none;appearance:none;width:100%;height:3px;border-radius:2px;
-  background:linear-gradient(90deg,rgba(195,154,92,.6),rgba(244,241,233,.14));
-  outline:none;
+  background:linear-gradient(90deg,rgba(195,154,92,.6),rgba(244,241,233,.14));outline:none;
 }
 input[type=range]::-webkit-slider-thumb{
   -webkit-appearance:none;width:14px;height:14px;border-radius:50%;
   background:var(--brass);border:2px solid #0A100D;cursor:pointer;
 }
 input[type=range]::-moz-range-thumb{
-  width:14px;height:14px;border-radius:50%;background:var(--brass);
-  border:2px solid #0A100D;cursor:pointer;
+  width:14px;height:14px;border-radius:50%;background:var(--brass);border:2px solid #0A100D;cursor:pointer;
 }
-
 #chips{display:flex;flex-wrap:wrap;gap:6px}
 .chip{
   font-size:10.5px;letter-spacing:.09em;padding:6px 11px;border-radius:999px;
@@ -97,33 +66,63 @@ input[type=range]::-moz-range-thumb{
 }
 .chip.on{border-color:var(--brass);color:var(--brass);background:rgba(195,154,92,.10)}
 
-.note{
-  max-width:560px;font-size:11.5px;line-height:1.65;color:rgba(244,241,233,.45);
-  margin:0;
+/* voiceover panel */
+details#voPanel{
+  width:100%;max-width:560px;border:1px solid var(--line);border-radius:14px;
+  background:rgba(244,241,233,.02);padding:0 16px;
 }
+details#voPanel[open]{padding-bottom:16px}
+summary{
+  cursor:pointer;list-style:none;padding:14px 0;display:flex;align-items:center;gap:10px;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,241,233,.75);
+}
+summary::-webkit-details-marker{display:none}
+summary::before{content:'+';color:var(--brass);font-size:13px;width:10px}
+details[open] summary::before{content:'–'}
+#voState{margin-left:auto;font-size:9.5px;letter-spacing:.14em;color:rgba(244,241,233,.35);text-transform:none}
+.vorow{
+  display:flex;align-items:center;gap:12px;padding:9px 0;
+  border-top:1px solid rgba(244,241,233,.06);
+}
+.vometa{flex:1;min-width:0}
+.vometa b{display:block;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,241,233,.62);font-weight:500}
+.vometa span{display:block;font-size:11px;line-height:1.45;color:rgba(244,241,233,.34);margin-top:2px}
+.vorow.on .vometa b{color:var(--brass)}
+.vorow.on .vometa span{color:rgba(244,241,233,.6)}
+input[type=file]{
+  font-size:10px;color:rgba(244,241,233,.4);width:170px;flex:none;
+}
+input[type=file]::file-selector-button{
+  font:inherit;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+  background:#111B17;color:rgba(244,241,233,.75);border:1px solid var(--line);
+  border-radius:999px;padding:6px 10px;margin-right:8px;cursor:pointer;
+}
+.vofoot{display:flex;align-items:center;gap:10px;border-top:1px solid rgba(244,241,233,.06);padding-top:12px}
+.vofoot label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,241,233,.45);display:flex;align-items:center;gap:8px}
+input[type=number]{
+  width:66px;font:inherit;font-size:11px;background:#111B17;color:var(--paper);
+  border:1px solid var(--line);border-radius:8px;padding:6px 8px;
+}
+.note{max-width:560px;font-size:11.5px;line-height:1.65;color:rgba(244,241,233,.45);margin:0}
 .note b{color:rgba(244,241,233,.72);font-weight:500}
 
-/* loading */
 #load{
-  position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;
-  justify-content:center;z-index:50;transition:opacity .4s;
-  font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--sage);
+  position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;
+  z-index:50;transition:opacity .4s;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--sage);
 }
 body:not(.loading) #load{opacity:0;pointer-events:none}
 
-/* frozen frame mode: /?t=12.4 */
 body.frozen{padding:0;gap:0;background:#000}
-body.frozen header,
-body.frozen .controls,
-body.frozen .note{display:none}
+body.frozen header,body.frozen .controls,body.frozen .note,
+body.frozen details#voPanel{display:none}
 body.frozen #load{display:none}
-body.frozen canvas#stage{
-  height:100vh;border-radius:0;box-shadow:none;
-}
+body.frozen canvas#stage{height:100vh;border-radius:0;box-shadow:none}
 
 @media (max-width:520px){
-  canvas#stage{height:min(64vh, 600px)}
+  canvas#stage{height:min(58vh,560px)}
   header h1{font-size:17px}
+  input[type=file]{width:auto;flex:1}
+  .vorow{flex-wrap:wrap}
 }
 </style>
 </head>
@@ -152,11 +151,25 @@ body.frozen canvas#stage{
     <button id="record">Record video</button>
   </div>
   <p class="note">
-    <b>Review:</b> drag the timeline to scrub, or use the space bar to play and pause, arrow keys to step one frame.
-    Scene buttons jump to a beat. <b>Record video</b> plays the whole thing and saves it as a file you can drop into Instagram.
+    <b>Review:</b> drag the timeline to scrub, space bar plays and pauses, arrow keys step one frame.
+    <b>Record video</b> plays the whole thing once and saves the file, voiceover mixed in.
   </p>
 </div>
 
+<details id="voPanel">
+  <summary>Voiceover <span id="voState">none loaded</span></summary>
+  <p class="note" style="margin:0 0 10px">
+    Drop in your ElevenLabs clips. One clip per line, so nothing drifts: each one fires at its own
+    cue and is mixed into the recorded video. Each row shows the exact seconds the line has to fit.
+  </p>
+  <div id="voRows"></div>
+  <div class="vofoot">
+    <label>Full take offset <input id="voOffset" type="number" step="0.1" value="0"></label>
+    <button id="voClear">Clear</button>
+  </div>
+</details>
+
 <script src="reel.js"></script>
+<script src="ui.js"></script>
 </body>
 </html>

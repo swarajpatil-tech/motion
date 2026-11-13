@@ -1032,6 +1032,7 @@ async function boot() {
   }
 
   ready = true;
+  renderAt(current);              // paint immediately, before the first rAF tick
   document.body.classList.remove('loading');
   requestAnimationFrame(loop);
 

@@ -1,4 +1,4 @@
-# Build: swarajpatil.com — Portfolio 2.0
+# Build: swarajpatil.com, Portfolio 2.0
 
 You are a senior product designer and frontend engineer. Build me a personal portfolio site. You have full authority over structure, layout, type and motion. Be opinionated: this site is itself the work sample, so it must look like a designer made it, not like a template with my name typed into it.
 
@@ -21,7 +21,7 @@ My goal is to make that owner think: *"if he made this, he can make mine."* Not 
 
 **Do**
 - Editorial layout. Asymmetric grid, deliberate off-centre balance, large type, generous whitespace.
-- One type pairing: a high-contrast display serif for headlines (Instrument Serif or Fraunces) with a tight grotesque for everything else (Inter Tight). Headlines large enough that they are the actual visual — 64px+ on desktop.
+- One type pairing: a high-contrast display serif for headlines (Instrument Serif or Fraunces) with a tight grotesque for everything else (Inter Tight). Headlines large enough that they are the actual visual, 64px+ on desktop.
 - A fixed, restrained palette: bone `#F4F1EA`, ink `#111110`, terracotta `#C2542D` as the single accent, plus one cool accent (`#1A47FF`) used only for links and focus states.
 - Real photography and real screenshots where they exist. Real proof is the design.
 - Negative space as a material. Sections should breathe; do not fill every row.
@@ -64,22 +64,22 @@ React, TypeScript, Vite, Tailwind. Three.js for 3D. Framer Motion for animation.
 ### Projects (ten, all mine, all real)
 Present these as case studies, not as a grid of cards with "Visit site" buttons, because the live URLs are not public yet. Each one deserves a short, specific paragraph about the problem and what I built. Not a generic feature list. Do not invent URLs for these.
 
-1. **Portfolio 1.0** — a cinematic dark personal site. A Three.js hero, a working automation demo, an embedded live dashboard, an interactive Web Audio "guitar lab", and its own AI chat assistant.
-2. **Luxury Watch Experience** — a premium watch showcase and store.
-3. **Swaraj Pro Web Suite** — a suite of web tools.
-4. **Deep In Market** — a site for a stock-market training and advisory business.
-5. **Madly Wholesale** — a dark-and-gold luxury wholesale store (watches, gift sets, streetwear, art prints) with tiered volume discounts and a WhatsApp ordering flow.
-6. **Swaraj Pro Tennis** — a 3D browser tennis game in React and Three.js, playable with MediaPipe hand-tracking through the webcam, or mouse, or keyboard, with a "Pocket Racket" phone-controller concept.
-7. **New Era English School** — a live client site for a Maharashtra State Board school in Nashik, Nursery to Grade X: academics, achievements, trophies, press coverage, admissions.
-8. **Sandeep's Music Academy** — a client site in progress for a two-branch music academy in Nashik. Media-heavy: reels, photo galleries, a fee and plan estimator.
-9. **Quinn** — a JARVIS-style AI desktop assistant in Python and PySide6, with a particle-sphere UI and multiple AI providers (Gemini, Claude, Grok) with live web grounding.
-10. **PforPIX** — a thumbnail marketplace with a glassmorphism aesthetic.
+1. **Portfolio 1.0**, a cinematic dark personal site. A Three.js hero, a working automation demo, an embedded live dashboard, an interactive Web Audio "guitar lab", and its own AI chat assistant.
+2. **Luxury Watch Experience**, a premium watch showcase and store.
+3. **Swaraj Pro Web Suite**, a suite of web tools.
+4. **Deep In Market**, a site for a stock-market training and advisory business.
+5. **Madly Wholesale**, a dark-and-gold luxury wholesale store (watches, gift sets, streetwear, art prints) with tiered volume discounts and a WhatsApp ordering flow.
+6. **Swaraj Pro Tennis**, a 3D browser tennis game in React and Three.js, playable with MediaPipe hand-tracking through the webcam, or mouse, or keyboard, with a "Pocket Racket" phone-controller concept.
+7. **New Era English School**, a live client site for a Maharashtra State Board school in Nashik, Nursery to Grade X: academics, achievements, trophies, press coverage, admissions.
+8. **Sandeep's Music Academy**, a client site in progress for a two-branch music academy in Nashik. Media-heavy: reels, photo galleries, a fee and plan estimator.
+9. **Quinn**, a JARVIS-style AI desktop assistant in Python and PySide6, with a particle-sphere UI and multiple AI providers (Gemini, Claude, Grok) with live web grounding.
+10. **PforPIX**, a thumbnail marketplace with a glassmorphism aesthetic.
 
 ### Credentials (real, with evidence)
-- **The Godavari Investment & Impact Conclave, 24 Feb 2026** — exhibited my innovation at the Conclave and presented it to the Hon. Shri Ayush Prasad, Collector & District Magistrate, Nashik. Organised by the Nashik District Administration, Kumbhathon Innovation Foundation and CSRBOX. Certificate image provided.
-- **Young Indians Parliament 2026** — participated in the City Level Round, Nashik, 21 June 2026. Confederation of Indian Industry. Certificate image provided.
-- **AI Odyssey, New Era English School, 17 Feb 2026** — participation. Certificate image provided.
-- **AI & Technical Excellence Distinction, 2026** — text only, there is no certificate image, so present it as a line, not as a framed award.
+- **The Godavari Investment & Impact Conclave, 24 Feb 2026**, exhibited my innovation at the Conclave and presented it to the Hon. Shri Ayush Prasad, Collector & District Magistrate, Nashik. Organised by the Nashik District Administration, Kumbhathon Innovation Foundation and CSRBOX. Certificate image provided.
+- **Young Indians Parliament 2026**, participated in the City Level Round, Nashik, 21 June 2026. Confederation of Indian Industry. Certificate image provided.
+- **AI Odyssey, New Era English School, 17 Feb 2026**, participation. Certificate image provided.
+- **AI & Technical Excellence Distinction, 2026**, text only, there is no certificate image, so present it as a line, not as a framed award.
 - Grade B, Intermediate Drawing Exam. Trinity-certified acoustic guitarist.
 
 ### Links
@@ -157,6 +157,6 @@ Requirements:
 - Every image above is used, none is a broken link, and every certificate is readable when opened.
 - Nothing on the page is lorem ipsum, invented, or a dead link.
 - It looks like a designer's portfolio on first scroll, on a 360px phone, with no tricks required to see the work.
-- The chat assistant answers three test questions correctly — "what does Swaraj do", "where is he based", "how do I contact him" — and still answers them with the AI call disabled.
+- The chat assistant answers three test questions correctly, "what does Swaraj do", "where is he based", "how do I contact him", and still answers them with the AI call disabled.
 
 Build the whole thing. Do not stop to ask me which section to do first.
